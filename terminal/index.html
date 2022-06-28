@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta http-equiv="content-type" 
+        content="text/html; charset=UTF-8">
+  
+    <meta name="viewport" content="width=device-width,
+        minimum-scale=1,initial-scale=1">
+  
+    <script src=
+        "https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+  
+    <script src=
+"https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js">
+    </script>
+  
+    <link rel="stylesheet" href=
+"https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+  
+    <style type="text/css">
+        .terminal,
+        span,
+        .cmd,
+        div {
+            --color: rgba(0, 128, 0, 0.99);
+        }
+  
+        .terminal,
+        span {
+            --size: 1.4;
+        }
+    </style>
+  <link rel="stylesheet" href="terminal/style.css">
+<body>
+  
+    <script>
+        $('body').terminal({
+            iam: function (name) {
+                this.echo('Hello, ' + name +
+                    '. Welcome to GeeksForGeeks');
+            },
+            about: function () {
+                this.echo('*shndev*');
+            },
+            projects: function () {
+                this.echo('*projects*');
+            },
+            social: function () {
+                this.echo('*social*');
+            },
+            exit: function () {
+                window.open('','_parent','');
+                window.close();
+            },
+          
+            help: function () {
+                this.echo('\nCommands:\n' + 'about // learn about myself\n'
+                + 'projects // see my projects\n'
+                + 'social // learn my social media accounts');
+            },
+        }, {
+            greetings: 'SHNDEV [type "help" for info]'
+                + '\n(c) All Rights Reserved'
+                + '\n'
+                + 'C:\\Users\\Guest'
+        });
+    </script>
+  
+</body>
+  
+</html>
