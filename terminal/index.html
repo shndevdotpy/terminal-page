@@ -24,7 +24,8 @@
         span,
         .cmd,
         div {
-            --color: rgba(0, 128, 0, 0.99);
+            --color: rgba(255, 255, 255, 1);
+            --background: rgba(0, 0, 0, 0.5 );
         }
   
         .terminal,
@@ -32,30 +33,43 @@
             --size: 1.4;
         }
     </style>
-  <link rel="stylesheet" href="terminal/style.css">
 <body>
   
     <script>
         $('body').terminal({
             iam: function (name) {
                 this.echo('Hello, ' + name +
-                    '. Welcome to GeeksForGeeks');
+                    '.');
+            },
+            echo: function(text) {
+                this.echo(text)
             },
             about: function () {
-                this.echo('*shndev*');
+                this.echo('\n███████╗██╗  ██╗███╗   ██╗██████╗ ███████╗██╗   ██╗');
+                this.echo('██╔════╝██║  ██║████╗  ██║██╔══██╗██╔════╝██║   ██║');
+                this.echo('███████╗███████║██╔██╗ ██║██║  ██║█████╗  ██║   ██║');
+                this.echo('╚════██║██╔══██║██║╚██╗██║██║  ██║██╔══╝  ╚██╗ ██╔╝');
+                this.echo('███████║██║  ██║██║ ╚████║██████╔╝███████╗ ╚████╔╝ ');
+                this.echo('╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝  ╚═══╝  ');
+                this.echo("\nHi, I'm Suleyman (shndev) Sahin. I am 17 years old. I lived in Çanakkale until I was 7 years old and now I live in Istanbul. I am a 12th grade software development student. I am improving myself every day in this business and I believe I will be successful.");
             },
             projects: function () {
-                this.echo('*projects*');
+                this.echo('\n*cool projects will be added here :)*');
             },
             social: function () {
-                this.echo('*social*');
+                this.echo('\nHere is my social accounts:');
+                this.echo('Instagram: https://instagram.com');
+                this.echo('Github: https://github.com');
+                this.echo('Youtube: https://youtube.com');
+                this.echo('X: https://x.com');
+                this.echo('Mail: contact@suleymansahin.net')
             },
             exit: function () {
-                window.open('','_parent','');
-                window.close();
+                location.reload();
             },
           
             help: function () {
+
                 this.echo('\nCommands:\n' + 'about // learn about myself\n'
                 + 'projects // see my projects\n'
                 + 'social // learn my social media accounts');
